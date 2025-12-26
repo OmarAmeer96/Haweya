@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "about": "About",
+    "howItWorks": "How to Order",
+    "contact": "Contact"
+  },
+  "hero": {
+    "badge": "100% Handmade",
+    "title": "Islamic",
+    "titleAccent": "Calligraphy Art",
+    "subtitle": "Handcrafted artwork combining the beauty of Arabic calligraphy with the depth of Islamic meanings",
+    "btnBrowse": "Browse Products",
+    "btnHow": "How to Order",
+    "stat1": "Artworks",
+    "stat2": "Happy Clients",
+    "stat3": "Years Experience"
+  },
+  "products": {
+    "label": "Our Products",
+    "title": "Discover Our Artistic Collection",
+    "desc": "Every piece tells a story, every stroke carries meaning",
+    "filterAll": "All",
+    "filterQuranic": "Quranic Verses",
+    "filterNames": "Divine Names",
+    "filterModern": "Modern",
+    "btnOrder": "Order Now",
+    "product1": {
+      "name": "Ayat Al-Kursi",
+      "desc": "Thuluth calligraphy on premium canvas - 60×80 cm",
+      "badge": "Best Seller"
+    },
+    "product2": {
+      "name": "Allah - The Divine Name",
+      "desc": "Diwani calligraphy on natural linen - 50×70 cm"
+    },
+    "product3": {
+      "name": "Bismillah Ar-Rahman Ar-Raheem",
+      "desc": "Modern design on canvas - 40×60 cm",
+      "badge": "New"
+    },
+    "product4": {
+      "name": "Custom Name",
+      "desc": "Custom Naskh calligraphy - All sizes"
+    },
+    "product5": {
+      "name": "Surah Al-Ikhlas",
+      "desc": "Kufic calligraphy on wooden board - 70×90 cm"
+    },
+    "product6": {
+      "name": "Ar-Rahman Ar-Raheem",
+      "desc": "Modern dual design - 50×50 cm"
+    }
+  },
+  "howItWorks": {
+    "label": "Order Process",
+    "title": "How to Order Your Artwork?",
+    "desc": "4 simple steps to get your masterpiece",
+    "step1Title": "Choose Design",
+    "step1Desc": "Browse our gallery or request custom design",
+    "step2Title": "Specify Details",
+    "step2Desc": "Size, material, colors, and calligraphy style",
+    "step3Title": "Approve Design",
+    "step3Desc": "We send you a preview for approval before execution",
+    "step4Title": "Receive Artwork",
+    "step4Desc": "Safe shipping within 7-14 business days",
+    "ctaTitle": "Ready to Order a Custom Design?",
+    "ctaDesc": "Let us create a unique piece that reflects your taste",
+    "ctaBtn": "Start Custom Order"
+  },
+  "about": {
+    "label": "About Us",
+    "title": "A Journey from Passion to Mastery",
+    "desc": "For over a decade, I have devoted my life to reviving the beauty of Arabic calligraphy. Every piece I create is a spiritual journey that begins with selecting the finest materials and ends with artwork that reflects the depth of Islamic meanings.",
+    "badge": "Years Experience",
+    "feature1": "Award Winner",
+    "feature2": "Satisfied Client",
+    "feature3": "Shipping to 20+ Countries"
+  },
+  "contact": {
+    "title": "Contact Us",
+    "desc": "We're here to answer your questions and help you",
+    "nameField": "Full Name",
+    "emailField": "Email Address",
+    "messageField": "Your Message",
+    "btnSubmit": "Send Message"
+  },
+  "modal": {
+    "orderTitle": "Order Now",
+    "customTitle": "Custom Design Order",
+    "nameField": "Full Name",
+    "emailField": "Email Address",
+    "phoneField": "Phone Number",
+    "sizeField": "Choose Size",
+    "size1": "40×60 cm",
+    "size2": "50×70 cm",
+    "size3": "60×80 cm",
+    "size4": "70×90 cm",
+    "sizeCustom": "Custom Size",
+    "notesField": "Additional Notes",
+    "textField": "Desired Text (Verse, Name, Phrase)",
+    "calligraphyType": "Calligraphy Style",
+    "type1": "Thuluth",
+    "type2": "Diwani",
+    "type3": "Naskh",
+    "type4": "Kufic",
+    "detailsField": "Additional Details (Colors, Materials, Ideas)",
+    "btnConfirm": "Confirm Order",
+    "btnSend": "Send Order",
+    "successOrder": "Thank you for your order! We'll contact you soon",
+    "successCustom": "Your custom order has been sent! We'll contact you soon",
+    "successContact": "Thank you for contacting us! We'll respond as soon as possible"
+  },
+  "footer": {
+    "copyright": "All Rights Reserved"
+  }
+}
