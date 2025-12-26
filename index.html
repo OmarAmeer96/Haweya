@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Handmade Islamic Wall Art - Custom Calligraphy and Quranic Verses">
+    <title data-i18n="page-title">فن الخط الإسلامي المصنوع يدوياً</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@300;400;600;700&family=Montserrat:wght@300;400;600;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- ==================== NAVBAR ==================== -->
+    <nav class="navbar" id="navbar">
+        <div class="navbar__container">
+            <div class="navbar__logo">
+                <a href="#home">
+                    <i class="fas fa-feather-alt"></i>
+                    <span data-i18n="brand-name">فن الخط</span>
+                </a>
+            </div>
+            
+            <div class="navbar__menu" id="navbarMenu">
+                <ul class="navbar__list">
+                    <li class="navbar__item">
+                        <a href="#home" class="navbar__link" data-i18n="nav-home">الرئيسية</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#about" class="navbar__link" data-i18n="nav-about">عن الفنان</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#gallery" class="navbar__link" data-i18n="nav-gallery">المعرض</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#custom-order" class="navbar__link" data-i18n="nav-custom">طلب خاص</a>
+                    </li>
+                    <li class="navbar__item">
+                        <a href="#contact" class="navbar__link" data-i18n="nav-contact">تواصل معنا</a>
+                    </li>
+                </ul>
+                
+                <button class="navbar__lang-toggle" id="langToggle" aria-label="Toggle Language">
+                    <span class="lang-text">EN</span>
+                </button>
+            </div>
+            
+            <button class="navbar__toggle" id="navbarToggle" aria-label="Toggle Menu">
+                <span class="navbar__toggle-icon"></span>
+                <span class="navbar__toggle-icon"></span>
+                <span class="navbar__toggle-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ==================== HERO SECTION ==================== -->
+    <section class="hero" id="home">
+        <div class="hero__video-container">
+            <!-- Placeholder for video background -->
+            <video class="hero__video" autoplay muted loop playsinline poster="assets/hero-poster.jpg">
+                <source src="assets/calligraphy-process.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="hero__overlay"></div>
+        </div>
+        
+        <div class="hero__content">
+            <h1 class="hero__title">
+                <span class="hero__title-main" data-i18n="hero-title">فن الخط الإسلامي</span>
+                <span class="hero__title-sub" data-i18n="hero-subtitle">صُنع بعناية، مُصمم بحب</span>
+            </h1>
+            <p class="hero__description" data-i18n="hero-description">
+                لوحات فنية مصنوعة يدوياً تجمع بين جمال الخط العربي وعمق المعاني الإسلامية
+            </p>
+            <a href="#custom-order" class="hero__cta btn btn--primary">
+                <span data-i18n="hero-cta">اطلب لوحتك الخاصة</span>
+                <i class="fas fa-arrow-left"></i>
+            </a>
+        </div>
+        
+        <div class="hero__scroll-indicator">
+            <span data-i18n="scroll-down">استكشف المزيد</span>
+            <i class="fas fa-chevron-down"></i>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section class="about" id="about">
+        <div class="container">
+            <div class="about__wrapper">
+                <div class="about__image-container">
+                    <div class="about__image-frame">
+                        <img src="assets/artist-photo.jpg" alt="The Calligrapher" class="about__image">
+                    </div>
+                    <div class="about__image-decoration"></div>
+                </div>
+                
+                <div class="about__content">
+                    <span class="section-label" data-i18n="about-label">من نحن</span>
+                    <h2 class="section-title" data-i18n="about-title">عن الفنان</h2>
+                    
+                    <div class="about__text">
+                        <p data-i18n="about-p1">
+                            أهلاً بكم في عالم الخط الإسلامي، حيث تلتقي الروحانية مع الفن. منذ أكثر من عشر سنوات، أكرس وقتي لإحياء كلمات القرآن الكريم والأدعية من خلال فن الخط العربي التقليدي.
+                        </p>
+                        <p data-i18n="about-p2">
+                            كل لوحة مصنوعة يدوياً بعناية فائقة، باستخدام مواد طبيعية وتقنيات عريقة. هدفي هو أن أجعل كل قطعة فنية نافذة للتأمل والذكر في بيتكم.
+                        </p>
+                        <p data-i18n="about-p3">
+                            سواء كنت تبحث عن آية قرآنية، اسم مخطوط بجمال، أو قطعة فنية فريدة، أنا هنا لأحول رؤيتك إلى واقع ملموس.
+                        </p>
+                    </div>
+                    
+                    <div class="about__features">
+                        <div class="about__feature">
+                            <i class="fas fa-hand-sparkles"></i>
+                            <span data-i18n="about-feature-1">صُنع يدوياً 100%</span>
+                        </div>
+                        <div class="about__feature">
+                            <i class="fas fa-palette"></i>
+                            <span data-i18n="about-feature-2">تصاميم مخصصة</span>
+                        </div>
+                        <div class="about__feature">
+                            <i class="fas fa-certificate"></i>
+                            <span data-i18n="about-feature-3">جودة احترافية</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== GALLERY SECTION ==================== -->
+    <section class="gallery" id="gallery">
+        <div class="container">
+            <div class="gallery__header">
+                <span class="section-label" data-i18n="gallery-label">أعمالنا</span>
+                <h2 class="section-title" data-i18n="gallery-title">معرض الأعمال</h2>
+                <p class="section-description" data-i18n="gallery-description">
+                    اكتشف مجموعة من لوحاتنا المصنوعة يدوياً
+                </p>
+            </div>
+            
+            <div class="gallery__filters">
+                <button class="gallery__filter-btn gallery__filter-btn--active" data-filter="all">
+                    <span data-i18n="filter-all">الكل</span>
+                </button>
+                <button class="gallery__filter-btn" data-filter="quranic">
+                    <span data-i18n="filter-quranic">آيات قرآنية</span>
+                </button>
+                <button class="gallery__filter-btn" data-filter="names">
+                    <span data-i18n="filter-names">الأسماء</span>
+                </button>
+                <button class="gallery__filter-btn" data-filter="canvas">
+                    <span data-i18n="filter-canvas">كانفس</span>
+                </button>
+                <button class="gallery__filter-btn" data-filter="linen">
+                    <span data-i18n="filter-linen">كتان</span>
+                </button>
+            </div>
+            
+            <div class="gallery__grid" id="galleryGrid">
+                <!-- Gallery Item 1 -->
+                <article class="gallery__item" data-category="quranic canvas">
+                    <div class="gallery__item-image">
+                        <img src="assets/gallery/artwork-1.jpg" alt="Ayat Al-Kursi Calligraphy">
+                        <div class="gallery__item-overlay">
+                            <button class="gallery__item-action" aria-label="Zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="gallery__item-action" aria-label="Details">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery__item-content">
+                        <h3 class="gallery__item-title" data-i18n="gallery-item-1-title">آية الكرسي</h3>
+                        <p class="gallery__item-meta" data-i18n="gallery-item-1-meta">كانفس | 60×80 سم</p>
+                    </div>
+                </article>
+                
+                <!-- Gallery Item 2 -->
+                <article class="gallery__item" data-category="names linen">
+                    <div class="gallery__item-image">
+                        <img src="assets/gallery/artwork-2.jpg" alt="Custom Name Calligraphy">
+                        <div class="gallery__item-overlay">
+                            <button class="gallery__item-action" aria-label="Zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="gallery__item-action" aria-label="Details">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery__item-content">
+                        <h3 class="gallery__item-title" data-i18n="gallery-item-2-title">اسم مخصص</h3>
+                        <p class="gallery__item-meta" data-i18n="gallery-item-2-meta">كتان | 40×50 سم</p>
+                    </div>
+                </article>
+                
+                <!-- Gallery Item 3 -->
+                <article class="gallery__item" data-category="quranic linen">
+                    <div class="gallery__item-image">
+                        <img src="assets/gallery/artwork-3.jpg" alt="Bismillah Calligraphy">
+                        <div class="gallery__item-overlay">
+                            <button class="gallery__item-action" aria-label="Zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="gallery__item-action" aria-label="Details">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery__item-content">
+                        <h3 class="gallery__item-title" data-i18n="gallery-item-3-title">بسم الله الرحمن الرحيم</h3>
+                        <p class="gallery__item-meta" data-i18n="gallery-item-3-meta">كتان | 50×70 سم</p>
+                    </div>
+                </article>
+                
+                <!-- Gallery Item 4 -->
+                <article class="gallery__item" data-category="quranic canvas">
+                    <div class="gallery__item-image">
+                        <img src="assets/gallery/artwork-4.jpg" alt="Surah Al-Ikhlas">
+                        <div class="gallery__item-overlay">
+                            <button class="gallery__item-action" aria-label="Zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="gallery__item-action" aria-label="Details">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery__item-content">
+                        <h3 class="gallery__item-title" data-i18n="gallery-item-4-title">سورة الإخلاص</h3>
+                        <p class="gallery__item-meta" data-i18n="gallery-item-4-meta">كانفس | 70×90 سم</p>
+                    </div>
+                </article>
+                
+                <!-- Gallery Item 5 -->
+                <article class="gallery__item" data-category="names canvas">
+                    <div class="gallery__item-image">
+                        <img src="assets/gallery/artwork-5.jpg" alt="Allah Calligraphy">
+                        <div class="gallery__item-overlay">
+                            <button class="gallery__item-action" aria-label="Zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="gallery__item-action" aria-label="Details">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery__item-content">
+                        <h3 class="gallery__item-title" data-i18n="gallery-item-5-title">لفظ الجلالة</h3>
+                        <p class="gallery__item-meta" data-i18n="gallery-item-5-meta">كانفس | 50×50 سم</p>
+                    </div>
+                </article>
+                
+                <!-- Gallery Item 6 -->
+                <article class="gallery__item" data-category="quranic linen">
+                    <div class="gallery__item-image">
+                        <img src="assets/gallery/artwork-6.jpg" alt="Quranic Verse">
+                        <div class="gallery__item-overlay">
+                            <button class="gallery__item-action" aria-label="Zoom">
+                                <i class="fas fa-search-plus"></i>
+                            </button>
+                            <button class="gallery__item-action" aria-label="Details">
+                                <i class="fas fa-info-circle"></i>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="gallery__item-content">
+                        <h3 class="gallery__item-title" data-i18n="gallery-item-6-title">آية قرآنية</h3>
+                        <p class="gallery__item-meta" data-i18n="gallery-item-6-meta">كتان | 60×80 سم</p>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CUSTOM ORDER SECTION ==================== -->
+    <section class="custom-order" id="custom-order">
+        <div class="container">
+            <div class="custom-order__wrapper">
+                <div class="custom-order__content">
+                    <span class="section-label section-label--light" data-i18n="custom-label">مميز</span>
+                    <h2 class="section-title section-title--light" data-i18n="custom-title">اطلب لوحتك الخاصة</h2>
+                    <p class="custom-order__description" data-i18n="custom-description">
+                        هل لديك آية قرآنية مفضلة أو اسم تريد تخليده بالخط العربي؟ نحن نصنع لوحات فنية مخصصة تناسب ذوقك ومساحتك.
+                    </p>
+                    
+                    <div class="custom-order__process">
+                        <h3 class="custom-order__process-title" data-i18n="custom-process-title">كيف نعمل؟</h3>
+                        
+                        <div class="custom-order__steps">
+                            <div class="custom-order__step">
+                                <div class="custom-order__step-number">1</div>
+                                <div class="custom-order__step-content">
+                                    <h4 data-i18n="step-1-title">اختر النص</h4>
+                                    <p data-i18n="step-1-desc">أخبرنا بالآية أو الاسم الذي تريده</p>
+                                </div>
+                            </div>
+                            
+                            <div class="custom-order__step">
+                                <div class="custom-order__step-number">2</div>
+                                <div class="custom-order__step-content">
+                                    <h4 data-i18n="step-2-title">حدد التفاصيل</h4>
+                                    <p data-i18n="step-2-desc">اختر الحجم، المادة، والألوان</p>
+                                </div>
+                            </div>
+                            
+                            <div class="custom-order__step">
+                                <div class="custom-order__step-number">3</div>
+                                <div class="custom-order__step-content">
+                                    <h4 data-i18n="step-3-title">راجع التصميم</h4>
+                                    <p data-i18n="step-3-desc">نرسل لك معاينة قبل البدء</p>
+                                </div>
+                            </div>
+                            
+                            <div class="custom-order__step">
+                                <div class="custom-order__step-number">4</div>
+                                <div class="custom-order__step-content">
+                                    <h4 data-i18n="step-4-title">استلم تحفتك</h4>
+                                    <p data-i18n="step-4-desc">يتم الشحن خلال 7-14 يوم عمل</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#contact" class="btn btn--secondary">
+                        <span data-i18n="custom-cta">ابدأ طلبك الآن</span>
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+                
+                <div class="custom-order__visual">
+                    <div class="custom-order__image-wrapper">
+                        <img src="assets/custom-order-preview.jpg" alt="Custom Calligraphy Process" class="custom-order__image">
+                        <div class="custom-order__decoration"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact__header">
+                <span class="section-label" data-i18n="contact-label">تواصل</span>
+                <h2 class="section-title" data-i18n="contact-title">دعنا نبدع معاً</h2>
+                <p class="section-description" data-i18n="contact-description">
+                    نحن هنا للإجابة على أسئلتك ومساعدتك في اختيار القطعة المثالية
+                </p>
+            </div>
+            
+            <div class="contact__content">
+                <div class="contact__info">
+                    <div class="contact__info-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4 data-i18n="contact-email-label">البريد الإلكتروني</h4>
+                            <a href="mailto:info@islamicart.com">info@islamicart.com</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__info-item">
+                        <i class="fab fa-whatsapp"></i>
+                        <div>
+                            <h4 data-i18n="contact-whatsapp-label">واتساب</h4>
+                            <a href="https://wa.me/1234567890" target="_blank">+123 456 7890</a>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4 data-i18n="contact-location-label">الموقع</h4>
+                            <p data-i18n="contact-location">القاهرة، مصر</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact__social">
+                        <h4 data-i18n="contact-social-label">تابعنا</h4>
+                        <div class="contact__social-links">
+                            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                            <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact__form" id="contactForm">
+                    <div class="contact__form-group">
+                        <input type="text" id="name" class="contact__form-input" required>
+                        <label for="name" class="contact__form-label" data-i18n="form-name">الاسم الكامل</label>
+                    </div>
+                    
+                    <div class="contact__form-group">
+                        <input type="email" id="email" class="contact__form-input" required>
+                        <label for="email" class="contact__form-label" data-i18n="form-email">البريد الإلكتروني</label>
+                    </div>
+                    
+                    <div class="contact__form-group">
+                        <input type="tel" id="phone" class="contact__form-input">
+                        <label for="phone" class="contact__form-label" data-i18n="form-phone">رقم الهاتف</label>
+                    </div>
+                    
+                    <div class="contact__form-group contact__form-group--full">
+                        <textarea id="message" class="contact__form-input contact__form-textarea" rows="5" required></textarea>
+                        <label for="message" class="contact__form-label" data-i18n="form-message">رسالتك</label>
+                    </div>
+                    
+                    <button type="submit" class="btn btn--primary">
+                        <span data-i18n="form-submit">إرسال الرسالة</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__content">
+                <div class="footer__brand">
+                    <h3>
+                        <i class="fas fa-feather-alt"></i>
+                        <span data-i18n="brand-name">فن الخط</span>
+                    </h3>
+                    <p data-i18n="footer-tagline">
+                        حيث يلتقي الإيمان بالفن
+                    </p>
+                </div>
+                
+                <div class="footer__links">
+                    <h4 data-i18n="footer-links-title">روابط سريعة</h4>
+                    <ul>
+                        <li><a href="#home" data-i18n="nav-home">الرئيسية</a></li>
+                        <li><a href="#about" data-i18n="nav-about">عن الفنان</a></li>
+                        <li><a href="#gallery" data-i18n="nav-gallery">المعرض</a></li>
+                        <li><a href="#contact" data-i18n="nav-contact">تواصل معنا</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer__legal">
+                    <p>&copy; <span id="currentYear">2025</span> <span data-i18n="footer-rights">جميع الحقوق محفوظة</span></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ==================== FLOATING WHATSAPP BUTTON ==================== -->
+    <a href="https://wa.me/1234567890" class="whatsapp-fab" target="_blank" aria-label="Contact on WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==================== SCRIPTS ==================== -->
+    <script src="script.js"></script>
+</body>
+</html>
