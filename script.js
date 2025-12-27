@@ -319,14 +319,8 @@ function initializeScrollAnimations() {
 
 // Smooth page transitions
 function initializePageTransitions() {
-    // Set initial opacity
-    document.body.style.opacity = '0';
-    document.body.style.transition = 'opacity 0.5s ease';
-    
-    // Force show after a short delay to prevent white screen
-    setTimeout(() => {
-        document.body.style.opacity = '1';
-    }, 100);
+    // Ensure body is always visible - no transitions to prevent white screen
+    document.body.style.opacity = '1';
 }
 
 // Close modal on outside click

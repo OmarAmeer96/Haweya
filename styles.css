@@ -982,7 +982,25 @@ body {
     box-shadow: 0 10px 40px rgba(37, 211, 102, 0.8);
 }
 
-/* Responsive */
+/* Responsive - Comprehensive Mobile Optimization */
+
+/* Tablets and Small Laptops */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .products__grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+    
+    .steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Tablets */
 @media (max-width: 968px) {
     .navbar__menu {
         position: fixed;
@@ -1026,16 +1044,108 @@ body {
 }
 
 @media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+    
     .container {
         padding: 0 1rem;
     }
     
+    /* Navbar Mobile */
+    .navbar__container {
+        padding: 0.5rem 1rem;
+    }
+    
+    .navbar__logo {
+        font-size: 1.1rem;
+    }
+    
+    .navbar__logo span {
+        display: none;
+    }
+    
+    .navbar__menu {
+        display: none;
+    }
+    
+    .lang-toggle {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.75rem;
+    }
+    
+    /* Products Section Mobile */
+    .products {
+        padding: 5rem 0 3rem;
+    }
+    
+    .section-header::before {
+        width: 60px;
+        height: 3px;
+        top: -20px;
+    }
+    
+    .label {
+        font-size: 0.75rem;
+        padding: 0.5rem 1rem;
+        letter-spacing: 1px;
+    }
+    
+    .title {
+        font-size: 2rem !important;
+        margin-bottom: 1rem;
+    }
+    
+    .desc {
+        font-size: 0.95rem;
+    }
+    
+    .products__filters {
+        gap: 0.5rem;
+        margin-bottom: 2rem;
+    }
+    
+    .filter-btn {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
     .products__grid {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .product-card {
+        max-width: 100%;
+    }
+    
+    /* How It Works Mobile */
+    .how-it-works {
+        padding: 3rem 0;
     }
     
     .steps {
         grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .step-card {
+        padding: 1.5rem;
+    }
+    
+    .step-card__number {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+    
+    .step-card__icon {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .step-card__icon i {
+        font-size: 1.5rem;
     }
     
     .hero__stats {
@@ -1043,7 +1153,102 @@ body {
     }
     
     .cta-box {
-        padding: 2rem;
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+    }
+    
+    .cta-box h3 {
+        font-size: 1.3rem;
+    }
+    
+    /* Buttons Mobile */
+    .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 0.9rem 1.5rem;
+        font-size: 0.95rem;
+    }
+    
+    .btn--large {
+        padding: 1rem 2rem;
+        font-size: 1rem;
+    }
+    
+    .btn--small {
+        padding: 0.5rem 1rem;
+        font-size: 0.85rem;
+    }
+    
+    /* Footer Mobile */
+    .footer {
+        padding: 1.5rem 0;
+    }
+    
+    .footer p {
+        font-size: 0.85rem;
+    }
+    
+    /* Modal Mobile */
+    .modal__content {
+        width: 95%;
+        max-width: 95%;
+        padding: 1.5rem;
+        margin: 1rem;
+    }
+    
+    .modal__content h2 {
+        font-size: 1.3rem;
+    }
+    
+    .modal__content input,
+    .modal__content select,
+    .modal__content textarea {
+        font-size: 0.9rem;
+        padding: 0.8rem;
+    }
+    
+    /* WhatsApp FAB Mobile */
+    .whatsapp-fab {
+        width: 50px;
+        height: 50px;
+        bottom: 15px;
+        right: 15px;
+    }
+    
+    .whatsapp-fab i {
+        font-size: 1.5rem;
+    }
+}
+
+/* Extra Small Devices */
+@media (max-width: 375px) {
+    html {
+        font-size: 13px;
+    }
+    
+    .navbar__container {
+        padding: 0.5rem 0.75rem;
+    }
+    
+    .products {
+        padding: 4rem 0 2rem;
+    }
+    
+    .title {
+        font-size: 1.75rem !important;
+    }
+    
+    .filter-btn {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+    
+    .product-card__content h3 {
+        font-size: 1rem;
+    }
+    
+    .product-card__content p {
+        font-size: 0.85rem;
     }
     
     .modal__content {
