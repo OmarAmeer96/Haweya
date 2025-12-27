@@ -1,21 +1,9 @@
 {
   "nav": {
-    "home": "Home",
     "products": "Products",
     "about": "About",
     "howItWorks": "How to Order",
     "contact": "Contact"
-  },
-  "hero": {
-    "badge": "100% Handmade",
-    "title": "Islamic",
-    "titleAccent": "Calligraphy Art",
-    "subtitle": "Handcrafted artwork combining the beauty of Arabic calligraphy with the depth of Islamic meanings",
-    "btnBrowse": "Browse Products",
-    "btnHow": "How to Order",
-    "stat1": "Artworks",
-    "stat2": "Happy Clients",
-    "stat3": "Years Experience"
   },
   "products": {
     "label": "Our Products",

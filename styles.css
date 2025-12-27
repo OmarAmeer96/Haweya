@@ -177,118 +177,6 @@ body {
     transition: all var(--transition-speed) var(--transition-smooth);
 }
 
-/* Hero Section */
-.hero {
-    position: relative;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
-    overflow: hidden;
-    padding-top: 60px;
-}
-
-.hero__bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-image: 
-        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="%2306B6D4" fill-opacity="0.05" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,154.7C960,171,1056,181,1152,165.3C1248,149,1344,107,1392,85.3L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>');
-    background-size: cover;
-    background-position: bottom;
-    opacity: 0.3;
-    animation: wave 20s ease-in-out infinite;
-}
-
-@keyframes wave {
-    0%, 100% { transform: translateX(0); }
-    50% { transform: translateX(-5%); }
-}
-
-.hero__container {
-    position: relative;
-    z-index: 2;
-}
-
-.hero__content {
-    max-width: 700px;
-}
-
-.hero__badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    background: rgba(6, 182, 212, 0.15);
-    color: var(--accent);
-    padding: 0.6rem 1.2rem;
-    border-radius: 50px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    margin-bottom: 1.5rem;
-    border: 1px solid rgba(6, 182, 212, 0.3);
-    animation: fadeInUp 0.8s var(--transition-smooth);
-}
-
-.hero__title {
-    font-size: clamp(3rem, 8vw, 5rem);
-    font-weight: 900;
-    color: var(--text);
-    line-height: 1.1;
-    margin-bottom: 1.5rem;
-    font-family: 'Amiri', serif;
-    animation: fadeInUp 1s var(--transition-smooth);
-}
-
-.hero__title span {
-    color: var(--accent);
-    display: inline-block;
-    animation: fadeInUp 1.2s var(--transition-smooth);
-}
-
-.hero__subtitle {
-    font-size: 1.25rem;
-    color: var(--text-secondary);
-    margin-bottom: 2.5rem;
-    line-height: 1.9;
-    animation: fadeInUp 1.4s var(--transition-smooth);
-}
-
-.hero__cta {
-    display: flex;
-    gap: 1rem;
-    margin-bottom: 3rem;
-    flex-wrap: wrap;
-    animation: fadeInUp 1.6s var(--transition-smooth);
-}
-
-.hero__stats {
-    display: flex;
-    gap: 3rem;
-    flex-wrap: wrap;
-    animation: fadeInUp 1.8s var(--transition-smooth);
-}
-
-.stat {
-    display: flex;
-    flex-direction: column;
-}
-
-.stat__num {
-    font-size: 2.5rem;
-    font-weight: 800;
-    color: var(--accent);
-    line-height: 1;
-    font-family: 'Poppins', sans-serif;
-}
-
-.stat__label {
-    color: var(--text-secondary);
-    font-size: 0.9rem;
-    margin-top: 0.3rem;
-}
-
 /* Buttons */
 .btn {
     display: inline-flex;
@@ -379,17 +267,51 @@ body {
 .section-header {
     text-align: center;
     margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-header::before {
+    content: '';
+    position: absolute;
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80px;
+    height: 5px;
+    background: linear-gradient(90deg, var(--accent), var(--gold));
+    border-radius: 10px;
 }
 
 .label {
     display: inline-block;
+    background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(251, 191, 36, 0.1) 100%);
     color: var(--accent);
-    font-weight: 600;
-    font-size: 0.9rem;
+    font-weight: 700;
+    font-size: 0.95rem;
     text-transform: uppercase;
-    letter-spacing: 1.5px;
-    margin-bottom: 0.5rem;
+    letter-spacing: 2px;
+    margin-bottom: 1rem;
+    padding: 0.7rem 1.8rem;
+    border-radius: 50px;
+    border: 2px solid rgba(6, 182, 212, 0.2);
     animation: fadeIn 0.6s var(--transition-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.label::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    transition: left 0.5s ease;
+}
+
+.section-header:hover .label::before {
+    left: 100%;
 }
 
 .label--light {
@@ -397,12 +319,17 @@ body {
 }
 
 .title {
-    font-size: clamp(2rem, 5vw, 3rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     font-weight: 800;
     color: var(--primary);
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     font-family: 'Amiri', serif;
     animation: fadeInUp 0.8s var(--transition-smooth);
+    line-height: 1.2;
+    background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
 }
 
 .title--light {
@@ -410,11 +337,13 @@ body {
 }
 
 .desc {
-    font-size: 1.1rem;
-    color: var(--text-secondary);
-    max-width: 600px;
+    font-size: 1.15rem;
+    color: #64748B;
+    max-width: 700px;
     margin: 0 auto;
     animation: fadeInUp 1s var(--transition-smooth);
+    line-height: 1.8;
+    font-weight: 400;
 }
 
 .desc--light {
@@ -423,8 +352,41 @@ body {
 
 /* Products Section */
 .products {
-    padding: 6rem 0;
-    background: var(--bg-secondary);
+    padding: 8rem 0 5rem;
+    background: linear-gradient(180deg, #FAFBFC 0%, var(--bg-secondary) 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.products::before {
+    content: '';
+    position: absolute;
+    top: -10%;
+    right: -5%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(6, 182, 212, 0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 20s ease-in-out infinite;
+}
+
+.products::after {
+    content: '';
+    position: absolute;
+    bottom: -10%;
+    left: -5%;
+    width: 500px;
+    height: 500px;
+    background: radial-gradient(circle, rgba(251, 191, 36, 0.06) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    animation: float 15s ease-in-out infinite reverse;
+}
+
+@keyframes float {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(20px, -20px) scale(1.1); }
 }
 
 .products__filters {

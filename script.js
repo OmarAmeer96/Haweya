@@ -16,13 +16,25 @@ async function loadTranslations(lang) {
 
 // Initialize translations
 async function initializeI18n() {
-    // Load both languages
-    translations.ar = await loadTranslations('ar');
-    translations.en = await loadTranslations('en');
-    
-    // Set initial language
-    const savedLang = localStorage.getItem('language') || 'ar';
-    await switchLanguage(savedLang, false);
+    try {
+        // Load both languages
+        translations.ar = await loadTranslations('ar');
+        translations.en = await loadTranslations('en');
+        
+        // Check if translations loaded successfully
+        if (!translations.ar || !translations.en) {
+            console.error('Failed to load translations');
+            // Set fallback to prevent errors
+            translations.ar = translations.ar || {};
+            translations.en = translations.en || {};
+        }
+        
+        // Set initial language
+        const savedLang = localStorage.getItem('language') || 'ar';
+        await switchLanguage(savedLang, false);
+    } catch (error) {
+        console.error('Error initializing translations:', error);
+    }
 }
 
 // Switch language
@@ -64,6 +76,12 @@ function getNestedTranslation(obj, path) {
 // Update form placeholders
 function updatePlaceholders() {
     const t = translations[currentLang];
+    
+    // Check if translations are loaded
+    if (!t || !t.contact || !t.modal) {
+        console.error('Translations not loaded properly');
+        return;
+    }
     
     // Contact form
     const contactName = document.querySelector('#contactForm input[type="text"]');
@@ -214,14 +232,12 @@ function initializeLanguageToggle() {
 
 // Form handling
 function initializeFormHandling() {
-    const t = translations[currentLang];
-    
     // Order form
     const orderForm = document.getElementById('orderForm');
     if (orderForm) {
         orderForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert(t.modal.successOrder);
+            alert(translations[currentLang].modal.successOrder);
             closeModal();
             orderForm.reset();
         });
@@ -232,7 +248,7 @@ function initializeFormHandling() {
     if (customForm) {
         customForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert(t.modal.successCustom);
+            alert(translations[currentLang].modal.successCustom);
             closeModal();
             customForm.reset();
         });
@@ -243,7 +259,7 @@ function initializeFormHandling() {
     if (contactForm) {
         contactForm.addEventListener('submit', (e) => {
             e.preventDefault();
-            alert(t.modal.successContact);
+            alert(translations[currentLang].modal.successContact);
             contactForm.reset();
         });
     }
@@ -303,11 +319,14 @@ function initializeScrollAnimations() {
 
 // Smooth page transitions
 function initializePageTransitions() {
+    // Set initial opacity
     document.body.style.opacity = '0';
-    window.addEventListener('load', () => {
-        document.body.style.transition = 'opacity 0.5s ease';
+    document.body.style.transition = 'opacity 0.5s ease';
+    
+    // Force show after a short delay to prevent white screen
+    setTimeout(() => {
         document.body.style.opacity = '1';
-    });
+    }, 100);
 }
 
 // Close modal on outside click
@@ -326,13 +345,19 @@ document.addEventListener('keydown', (e) => {
 
 // Initialize when DOM is loaded
 document.addEventListener('DOMContentLoaded', async function() {
-    await initializeI18n();
-    initializeProductFilters();
-    initializeSmoothScroll();
-    initializeFormHandling();
-    initializeMobileMenu();
-    initializeLanguageToggle();
-    initializeNavbarScroll();
-    initializeScrollAnimations();
-    initializePageTransitions();
+    try {
+        await initializeI18n();
+        initializeProductFilters();
+        initializeSmoothScroll();
+        initializeFormHandling();
+        initializeMobileMenu();
+        initializeLanguageToggle();
+        initializeNavbarScroll();
+        initializeScrollAnimations();
+        initializePageTransitions();
+    } catch (error) {
+        console.error('Initialization error:', error);
+        // Still show the page even if there's an error
+        document.body.style.opacity = '1';
+    }
 });

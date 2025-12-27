@@ -11,9 +11,8 @@
 <body>
 <nav class="navbar" id="navbar">
     <div class="container navbar__container">
-        <a href="#home" class="navbar__logo"><i class="fas fa-scroll"></i><span>فن الخط</span></a>
+        <a href="#products" class="navbar__logo"><i class="fas fa-scroll"></i><span>فن الخط</span></a>
         <ul class="navbar__menu" id="navbarMenu">
-            <li><a href="#home" data-i18n="nav.home">الرئيسية</a></li>
             <li><a href="#products" data-i18n="nav.products">المنتجات</a></li>
             <li><a href="#about" data-i18n="nav.about">من نحن</a></li>
             <li><a href="#how-it-works" data-i18n="nav.howItWorks">كيف تطلب</a></li>
@@ -31,105 +30,85 @@
     </div>
 </nav>
 
-<section class="hero" id="home">
-    <div class="hero__bg"></div>
-    <div class="container hero__container">
-        <div class="hero__content">
-            <span class="hero__badge"><i class="fas fa-star"></i> صنع يدويا 100%</span>
-            <h1 class="hero__title">فن الخط<br><span>الإسلامي</span></h1>
-            <p class="hero__subtitle">لوحات فنية مصنوعة يدويا تجمع بين جمال الخط العربي وعمق المعاني الإسلامية</p>
-            <div class="hero__cta">
-                <a href="#products" class="btn btn--primary"><span>تصفح المنتجات</span><i class="fas fa-arrow-left"></i></a>
-                <a href="#how-it-works" class="btn btn--outline"><span>كيف تطلب</span><i class="fas fa-play-circle"></i></a>
-            </div>
-            <div class="hero__stats">
-                <div class="stat"><span class="stat__num">500+</span><span class="stat__label">عمل فني</span></div>
-                <div class="stat"><span class="stat__num">300+</span><span class="stat__label">عميل سعيد</span></div>
-                <div class="stat"><span class="stat__num">10+</span><span class="stat__label">سنوات خبرة</span></div>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="products" id="products">
     <div class="container">
         <div class="section-header">
-            <span class="label">منتجاتنا</span>
-            <h2 class="title">اكتشف مجموعتنا الفنية</h2>
-            <p class="desc">كل قطعة تحكي قصة وكل خط يحمل معنى</p>
+            <span class="label" data-i18n="products.label">منتجاتنا</span>
+            <h2 class="title" data-i18n="products.title">اكتشف مجموعتنا الفنية</h2>
+            <p class="desc" data-i18n="products.desc">كل قطعة تحكي قصة وكل خط يحمل معنى</p>
         </div>
         <div class="products__filters">
-            <button class="filter-btn active" data-filter="all">الكل</button>
-            <button class="filter-btn" data-filter="quranic">آيات قرآنية</button>
-            <button class="filter-btn" data-filter="names">الأسماء الحسنى</button>
-            <button class="filter-btn" data-filter="modern">عصري</button>
+            <button class="filter-btn active" data-filter="all" data-i18n="products.filterAll">الكل</button>
+            <button class="filter-btn" data-filter="quranic" data-i18n="products.filterQuranic">آيات قرآنية</button>
+            <button class="filter-btn" data-filter="names" data-i18n="products.filterNames">الأسماء الحسنى</button>
+            <button class="filter-btn" data-filter="modern" data-i18n="products.filterModern">عصري</button>
         </div>
         <div class="products__grid" id="productsGrid">
             <div class="product-card" data-category="quranic">
-                <div class="product-card__badge">الأكثر مبيعا</div>
-                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1609599006353-e629aaabfeae?w=600" alt="آية الكرسي"></div>
+                <div class="product-card__badge" data-i18n="products.product1.badge">الأكثر مبيعا</div>
+                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="آية الكرسي"></div>
                 <div class="product-card__content">
-                    <h3>آية الكرسي</h3>
-                    <p>خط ثلث على كانفس فاخر - 6080 سم</p>
+                    <h3 data-i18n="products.product1.name">آية الكرسي</h3>
+                    <p data-i18n="products.product1.desc">خط ثلث على كانفس فاخر - 6080 سم</p>
                     <div class="product-card__footer">
                         <span class="price"><strong>$120</strong></span>
-                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)">اطلب الآن</button>
+                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)" data-i18n="products.btnOrder">اطلب الآن</button>
                     </div>
                 </div>
             </div>
             <div class="product-card" data-category="names">
-                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1585662518055-ff5b1c036677?w=600" alt="لفظ الجلالة"></div>
+                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="لفظ الجلالة"></div>
                 <div class="product-card__content">
-                    <h3>لفظ الجلالة - الله</h3>
-                    <p>خط ديواني على كتان طبيعي - 5070 سم</p>
+                    <h3 data-i18n="products.product2.name">لفظ الجلالة - الله</h3>
+                    <p data-i18n="products.product2.desc">خط ديواني على كتان طبيعي - 5070 سم</p>
                     <div class="product-card__footer">
                         <span class="price"><strong>$95</strong></span>
-                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)">اطلب الآن</button>
+                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)" data-i18n="products.btnOrder">اطلب الآن</button>
                     </div>
                 </div>
             </div>
             <div class="product-card" data-category="quranic modern">
-                <div class="product-card__badge badge--new">جديد</div>
-                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1591604021967-d6c5d816c8b5?w=600" alt="بسم الله"></div>
+                <div class="product-card__badge badge--new" data-i18n="products.product3.badge">جديد</div>
+                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="بسم الله"></div>
                 <div class="product-card__content">
-                    <h3>بسم الله الرحمن الرحيم</h3>
-                    <p>تصميم عصري على كانفس - 4060 سم</p>
+                    <h3 data-i18n="products.product3.name">بسم الله الرحمن الرحيم</h3>
+                    <p data-i18n="products.product3.desc">تصميم عصري على كانفس - 4060 سم</p>
                     <div class="product-card__footer">
                         <span class="price"><strong>$85</strong></span>
-                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)">اطلب الآن</button>
+                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)" data-i18n="products.btnOrder">اطلب الآن</button>
                     </div>
                 </div>
             </div>
             <div class="product-card" data-category="names">
                 <div class="product-card__img"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="اسم مخصص"></div>
                 <div class="product-card__content">
-                    <h3>اسم مخصص</h3>
-                    <p>خط نسخ مخصص - جميع المقاسات</p>
+                    <h3 data-i18n="products.product4.name">اسم مخصص</h3>
+                    <p data-i18n="products.product4.desc">خط نسخ مخصص - جميع المقاسات</p>
                     <div class="product-card__footer">
                         <span class="price"><strong>$75</strong></span>
-                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)">اطلب الآن</button>
+                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)" data-i18n="products.btnOrder">اطلب الآن</button>
                     </div>
                 </div>
             </div>
             <div class="product-card" data-category="quranic">
-                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1586190848861-99aa4a171e90?w=600" alt="سورة الإخلاص"></div>
+                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="سورة الإخلاص"></div>
                 <div class="product-card__content">
-                    <h3>سورة الإخلاص</h3>
-                    <p>خط كوفي على لوح خشبي - 7090 سم</p>
+                    <h3 data-i18n="products.product5.name">سورة الإخلاص</h3>
+                    <p data-i18n="products.product5.desc">خط كوفي على لوح خشبي - 7090 سم</p>
                     <div class="product-card__footer">
                         <span class="price"><strong>$135</strong></span>
-                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)">اطلب الآن</button>
+                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)" data-i18n="products.btnOrder">اطلب الآن</button>
                     </div>
                 </div>
             </div>
             <div class="product-card" data-category="names modern">
-                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1615750185825-4fbea97a839e?w=600" alt="الرحمن الرحيم"></div>
+                <div class="product-card__img"><img src="https://images.unsplash.com/photo-1578662996442-48f60103fc96?w=600" alt="الرحمن الرحيم"></div>
                 <div class="product-card__content">
-                    <h3>الرحمن الرحيم</h3>
-                    <p>تصميم عصري مزدوج - 5050 سم</p>
+                    <h3 data-i18n="products.product6.name">الرحمن الرحيم</h3>
+                    <p data-i18n="products.product6.desc">تصميم عصري مزدوج - 5050 سم</p>
                     <div class="product-card__footer">
                         <span class="price"><strong>$110</strong></span>
-                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)">اطلب الآن</button>
+                        <button class="btn btn--small btn--primary" onclick="openOrderModal(this)" data-i18n="products.btnOrder">اطلب الآن</button>
                     </div>
                 </div>
             </div>
@@ -140,40 +119,40 @@
 <section class="how-it-works" id="how-it-works">
     <div class="container">
         <div class="section-header">
-            <span class="label label--light">عملية الطلب</span>
-            <h2 class="title title--light">كيف تطلب لوحتك</h2>
-            <p class="desc desc--light">4 خطوات بسيطة للحصول على تحفتك الفنية</p>
+            <span class="label label--light" data-i18n="howItWorks.label">عملية الطلب</span>
+            <h2 class="title title--light" data-i18n="howItWorks.title">كيف تطلب لوحتك؟</h2>
+            <p class="desc desc--light" data-i18n="howItWorks.desc">4 خطوات بسيطة للحصول على تحفتك الفنية</p>
         </div>
         <div class="steps">
             <div class="step-card">
                 <div class="step-card__number">1</div>
                 <div class="step-card__icon"><i class="fas fa-palette"></i></div>
-                <h3>اختر التصميم</h3>
-                <p>تصفح معرضنا أو اطلب تصميم مخصص</p>
+                <h3 data-i18n="howItWorks.step1Title">اختر التصميم</h3>
+                <p data-i18n="howItWorks.step1Desc">تصفح معرضنا أو اطلب تصميم مخصص</p>
             </div>
             <div class="step-card">
                 <div class="step-card__number">2</div>
                 <div class="step-card__icon"><i class="fas fa-sliders-h"></i></div>
-                <h3>حدد التفاصيل</h3>
-                <p>المقاس المادة الألوان ونوع الخط</p>
+                <h3 data-i18n="howItWorks.step2Title">حدد التفاصيل</h3>
+                <p data-i18n="howItWorks.step2Desc">المقاس، المادة، الألوان، ونوع الخط</p>
             </div>
             <div class="step-card">
                 <div class="step-card__number">3</div>
                 <div class="step-card__icon"><i class="fas fa-check-circle"></i></div>
-                <h3>وافق على التصميم</h3>
-                <p>نرسل لك معاينة للموافقة قبل التنفيذ</p>
+                <h3 data-i18n="howItWorks.step3Title">وافق على التصميم</h3>
+                <p data-i18n="howItWorks.step3Desc">نرسل لك معاينة للموافقة قبل التنفيذ</p>
             </div>
             <div class="step-card">
                 <div class="step-card__number">4</div>
                 <div class="step-card__icon"><i class="fas fa-shipping-fast"></i></div>
-                <h3>استلم لوحتك</h3>
-                <p>شحن آمن خلال 7-14 يوم عمل</p>
+                <h3 data-i18n="howItWorks.step4Title">استلم لوحتك</h3>
+                <p data-i18n="howItWorks.step4Desc">شحن آمن خلال 7-14 يوم عمل</p>
             </div>
         </div>
         <div class="cta-box">
-            <h3>جاهز لطلب تصميم خاص</h3>
-            <p>دعنا نصنع لك قطعة فنية فريدة تعكس ذوقك</p>
-            <button class="btn btn--large btn--white" onclick="openCustomModal()"><span>ابدأ طلبك المخصص</span><i class="fas fa-arrow-left"></i></button>
+            <h3 data-i18n="howItWorks.ctaTitle">جاهز لطلب تصميم خاص؟</h3>
+            <p data-i18n="howItWorks.ctaDesc">دعنا نصنع لك قطعة فنية فريدة تعكس ذوقك</p>
+            <button class="btn btn--large btn--white" onclick="openCustomModal()"><span data-i18n="howItWorks.ctaBtn">ابدأ طلبك المخصص</span><i class="fas fa-arrow-left"></i></button>
         </div>
     </div>
 </section>
@@ -182,16 +161,16 @@
     <div class="container about__container">
         <div class="about__img">
             <img src="https://images.unsplash.com/photo-1604754742629-3e5728249d73?w=800" alt="الفنان">
-            <div class="about__badge"><span>10+</span>سنوات خبرة</div>
+            <div class="about__badge"><span>10+</span><span data-i18n="about.badge">سنوات خبرة</span></div>
         </div>
         <div class="about__content">
-            <span class="label">من نحن</span>
-            <h2 class="title">رحلة من الشغف إلى الإتقان</h2>
-            <p>منذ أكثر من عشر سنوات وأنا أكرس حياتي لإحياء جمال الخط العربي. كل لوحة أصنعها هي رحلة روحية تبدأ من اختيار أجود المواد وتنتهي بعمل فني يعكس عمق المعاني الإسلامية.</p>
+            <span class="label" data-i18n="about.label">من نحن</span>
+            <h2 class="title" data-i18n="about.title">رحلة من الشغف إلى الإتقان</h2>
+            <p data-i18n="about.desc">منذ أكثر من عشر سنوات وأنا أكرس حياتي لإحياء جمال الخط العربي. كل لوحة أصنعها هي رحلة روحية تبدأ من اختيار أجود المواد وتنتهي بعمل فني يعكس عمق المعاني الإسلامية.</p>
             <div class="about__features">
-                <div class="feature"><i class="fas fa-award"></i>حائز على جائزة التميز</div>
-                <div class="feature"><i class="fas fa-users"></i>300+ عميل راض</div>
-                <div class="feature"><i class="fas fa-globe"></i>شحن لـ 20+ دولة</div>
+                <div class="feature"><i class="fas fa-award"></i><span data-i18n="about.feature1">حائز على جائزة التميز</span></div>
+                <div class="feature"><i class="fas fa-users"></i><span data-i18n="about.feature2">300+ عميل راضٍ</span></div>
+                <div class="feature"><i class="fas fa-globe"></i><span data-i18n="about.feature3">شحن لـ 20+ دولة</span></div>
             </div>
         </div>
     </div>
@@ -201,8 +180,8 @@
     <div class="container">
         <div class="contact__container">
             <div class="contact__info">
-                <h2>تواصل معنا</h2>
-                <p>نحن هنا للإجابة على استفساراتك ومساعدتك</p>
+                <h2 data-i18n="contact.title">تواصل معنا</h2>
+                <p data-i18n="contact.desc">نحن هنا للإجابة على استفساراتك ومساعدتك</p>
                 <div class="contact__methods">
                     <a href="mailto:info@calligraphy.com" class="contact__method">
                         <i class="fas fa-envelope"></i>
@@ -218,7 +197,7 @@
                 <input type="text" placeholder="الاسم الكامل" required>
                 <input type="email" placeholder="البريد الإلكتروني" required>
                 <textarea placeholder="رسالتك" rows="4" required></textarea>
-                <button type="submit" class="btn btn--primary btn--full">إرسال الرسالة</button>
+                <button type="submit" class="btn btn--primary btn--full" data-i18n="contact.btnSubmit">إرسال الرسالة</button>
             </form>
         </div>
     </div>
@@ -226,14 +205,14 @@
 
 <footer class="footer">
     <div class="container">
-        <p>&copy; 2025 فن الخط. جميع الحقوق محفوظة</p>
+        <p>&copy; 2026 فن الخط. <span data-i18n="footer.copyright">جميع الحقوق محفوظة</span></p>
     </div>
 </footer>
 
 <div class="modal" id="orderModal">
     <div class="modal__content">
         <span class="modal__close" onclick="closeModal()">&times;</span>
-        <h2>اطلب الآن</h2>
+        <h2 data-i18n="modal.orderTitle">اطلب الآن</h2>
         <form id="orderForm">
             <input type="hidden" id="productName">
             <input type="text" placeholder="الاسم الكامل" required>
@@ -247,7 +226,7 @@
                 <option>7090 سم</option>
             </select>
             <textarea placeholder="ملاحظات إضافية" rows="3"></textarea>
-            <button type="submit" class="btn btn--primary btn--full">تأكيد الطلب</button>
+            <button type="submit" class="btn btn--primary btn--full" data-i18n="modal.btnConfirm">تأكيد الطلب</button>
         </form>
     </div>
 </div>
@@ -255,7 +234,7 @@
 <div class="modal" id="customModal">
     <div class="modal__content">
         <span class="modal__close" onclick="closeModal()">&times;</span>
-        <h2>طلب تصميم مخصص</h2>
+        <h2 data-i18n="modal.customTitle">طلب تصميم مخصص</h2>
         <form id="customForm">
             <input type="text" placeholder="الاسم الكامل" required>
             <input type="email" placeholder="البريد الإلكتروني" required>
@@ -277,7 +256,7 @@
                 <option>مقاس مخصص</option>
             </select>
             <textarea placeholder="تفاصيل إضافية (ألوان مواد أفكار)" rows="4"></textarea>
-            <button type="submit" class="btn btn--primary btn--full">إرسال الطلب</button>
+            <button type="submit" class="btn btn--primary btn--full" data-i18n="modal.btnSend">إرسال الطلب</button>
         </form>
     </div>
 </div>
